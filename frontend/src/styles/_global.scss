@@ -1,0 +1,26 @@
+@import './variables'; // Toujours importer les variables en premier
+@import './mixins';
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  a {
+    color: $primary-neon;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }

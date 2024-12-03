@@ -1,0 +1,23 @@
+@import './variables'; // Toujours importer les variables en premier
+@import './mixins';
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  a {
+    color: #4caf50;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+

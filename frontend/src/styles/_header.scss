@@ -1,0 +1,111 @@
+@import './variables';
+
+header {
+  display: flex;
+  justify-content: space-between; // Sépare le logo et les liens
+  align-items: center; // Centre verticalement le contenu
+  padding: 10px 30px; // Ajuste les marges internes
+  width: 100%; // Prend toute la largeur de l'écran
+  max-width: 1440px; // Limite à 1440px sur les grands écrans
+  margin: 0 auto; // Centre le header sur les grands écrans
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed; // Fixe le header en haut de la page
+  z-index: 1000; // Assure que le header passe au-dessus des autres éléments
+  box-sizing: border-box;
+
+  .logo {
+    img {
+      height: 60px; // Ajuste la taille du logo
+      width: auto; // Maintient les proportions
+      border-radius: 60px;
+    }
+  }
+
+  .burger-menu {
+    display: none; // Caché sur les grands écrans
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  nav {
+    ul {
+      display: flex; // Met les liens sur une ligne
+      list-style: none; // Supprime les puces
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: 20px; // Espacement entre les liens
+
+        a {
+          color: white; // Couleur du texte
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            color: $primary-color; // Couleur au survol
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styles pour les mobiles */
+@media (max-width: 768px) {
+  header {
+    justify-content: flex-end; // Aligne le menu burger à droite
+    padding: 10px 20px;
+    background-color: #00000000;
+
+    .logo {
+      display: none; // Cache le logo sur mobile
+    }
+
+    .burger-menu {
+      display: block; // Affiche le menu burger
+      margin-right: 30px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: #000000;
+    }
+  }
+
+  nav {
+    display: none; // Masque le menu par défaut
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 60px; // Place le menu sous le header
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+
+    &.open {
+      display: flex; // Affiche le menu lorsque la classe "open" est active
+    }
+
+    ul {
+      flex-direction: column; // Empile les liens en colonne
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 10px 0; // Espacement entre les liens
+
+        a {
+          display: block; // Chaque lien occupe une ligne entière
+          text-align: left; // Alignement à gauche
+          width: 100%; // Occupe toute la largeur disponible
+          padding: 10px; // Agrandit la zone cliquable
+        }
+      }
+    }
+  }
+}

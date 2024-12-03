@@ -1,0 +1,229 @@
+/* timeline.scss */
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* Alignement au début pour éviter l'étirement inattendu */
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-content-dev {
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    gap: 20px;
+    width: 70%;
+    align-items: flex-start;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+
+    .about-Img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      height: 500px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+  }
+
+  .about-parcours {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .about-parcours-content {
+      border-radius: 10px;
+      border: 1px solid black;
+      padding: 20px;
+      text-align: justify;
+      box-sizing: border-box;
+
+      h3 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+        word-wrap: break-word;
+      }
+
+      li {
+        word-wrap: break-word;
+        margin-bottom: 10px;
+      }
+    }
+
+    .about-CV {
+      position: relative;
+      border-radius: 12px;
+      border: 1px solid black;
+      background: #121212;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding-bottom: 20px;
+      
+      
+
+      /* Bordure lumineuse animée */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(44, 209, 185, 0.8) 60%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        background-size: 200% 200%;
+        z-index: 1;
+        animation: singleRay 3s linear infinite;
+        box-shadow: 0 0 8px rgba(44, 209, 185, 0.4);
+      }
+
+      /* Masque pour le contenu */
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: #121212;
+        z-index: 2;
+        margin: 1px;
+      }
+
+      /* Pour que le contenu reste visible */
+      > * {
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+
+  /* Animation pour la bordure lumineuse */
+  @keyframes singleRay {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 1200px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about-content-dev {
+    width: 100% !important;
+    flex-direction: column;
+    padding: 0;
+
+    .about-content {
+      height: auto;
+      padding-right: 0;
+    }
+  }
+
+  .about-parcours {
+    width: 100%;
+    padding: 0;
+
+    .about-parcours-content {
+      width: 100%;
+      padding: 20px 15px;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+
+    .about-CV {
+      width: 100%;
+      
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+  }
+
+  .about-content-dev {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+
+    .about-content {
+      height: auto;
+      padding-right: 0;
+    }
+  }
+
+  .about-parcours {
+    width: 100%;
+    padding: 0;
+
+    .about-parcours-content {
+      width: 100%;
+      padding: 20px 15px;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+
+    .about-CV {
+      width: 100%;
+      
+    }
+  }
+}

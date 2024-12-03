@@ -1,0 +1,11 @@
+@mixin neon-text($color) {
+    color: $color;
+    text-shadow: 0 0 5px $color, 0 0 10px $color, 0 0 20px $color;
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

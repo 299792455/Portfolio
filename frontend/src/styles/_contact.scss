@@ -1,0 +1,154 @@
+@import './variables'; // Toujours importer les variables en premier
+@import './mixins';
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 75%; // Par défaut sur desktop
+    margin: 0 auto; // Centre le formulaire horizontalement
+
+    input,
+    textarea {
+      width: 100%; // Assure que les champs prennent toute la largeur du conteneur
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+    }
+
+    button {
+      position: relative;
+      border-radius: 12px;
+      border: 1px solid black;
+      background: #121212;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      width: 100%; // Largeur par défaut pour le bouton sur mobile
+      font-size: 1rem;
+      color: white;
+
+      /* Bordure lumineuse animée */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(44, 209, 185, 0.8) 60%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        background-size: 200% 200%;
+        z-index: 1;
+        animation: singleRay 3s linear infinite;
+        box-shadow: 0 0 8px rgba(44, 209, 185, 0.4);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: #121212;
+        z-index: 2;
+        margin: 1px;
+      }
+
+      > * {
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 22px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    ul a {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: bold;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+/* _contact.scss */
+@media (max-width: 768px) {
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px; // Réduit le padding sur mobile
+  }
+
+  form {
+    width: 90%; // Formulaire prend 90% de la largeur sur mobile
+    margin: 0 auto; // Centre le formulaire horizontalement
+  }
+
+  .social-links {
+    width: 90%; // Les liens sociaux prennent également 90% de la largeur
+    margin: 20px auto; // Ajoute un espacement avec les autres éléments
+  }
+
+  form input,
+  form textarea {
+    width: 100%; // Champs prennent toute la largeur du formulaire
+  }
+
+  form button {
+    width: 100%; // Le bouton prend toute la largeur du formulaire sur mobile
+  }
+}
