@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab166aa2.css",
+    "main.js": "/static/js/main.aab2cefb.js",
+    "static/media/aboutImage.png": "/static/media/aboutImage.4e03fab459ef710f891d.png",
+    "static/media/bgAbout.jpeg": "/static/media/bgAbout.cbbfc20800f9c7ba287f.jpeg",
+    "static/media/PHP-logo.svg.png": "/static/media/PHP-logo.svg.1f32f22bff6c373c52fc.png",
+    "static/media/logo_CPI.webp": "/static/media/logo_CPI.f4b8eedd031c606708b7.webp",
+    "static/media/Visual_Studio_Code.png": "/static/media/Visual_Studio_Code.c0e134c3bbf4bd018d4c.png",
+    "static/media/Mongodb.png": "/static/media/Mongodb.90471ffaa0b261d22714.png",
+    "static/media/Express.png": "/static/media/Express.9b344d7469dbbdc76754.png",
+    "static/media/Feedly-logo.png": "/static/media/Feedly-logo.a1ac47393657b1379196.png",
+    "static/media/React-icon.svg.png": "/static/media/React-icon.svg.4f6dac908d982ea80341.png",
+    "index.html": "/index.html",
+    "main.ab166aa2.css.map": "/static/css/main.ab166aa2.css.map",
+    "main.aab2cefb.js.map": "/static/js/main.aab2cefb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab166aa2.css",
+    "static/js/main.aab2cefb.js"
+  ]
+}
