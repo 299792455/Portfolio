@@ -7,6 +7,9 @@ const projetSchema = mongoose.Schema({
     technologies: [{type: String}],
     githubLink: { type: String },
     imageUrls: [{ type: String }],
+    genese: { type: String, required: true},
+    problematique: { type: String, required: true},
+    solution: { type: String, required: true},
     date: { type: Date }
     // Quoi d'autres ?
 });

@@ -2,6 +2,9 @@ const bcrypt = require('bcrypt');
 const Utilisateur = require('../models/utilisateur');
 const jwt = require('jsonwebtoken');
 
+
+
+
 // Regex pour valider le mot de passe et l'email
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s])[A-Za-z\d@$!%*?&^#().,]{8,}$/;
 const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;

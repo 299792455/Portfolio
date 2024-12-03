@@ -1,11 +1,12 @@
 require('dotenv').config();
-
+const emailRoutes = require('./routes/emailRoutes');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const utilisateurRoutes = require('./routes/utilisateurRoute');
 const projetRoutes = require('./routes/projetsRoute');
+
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/utilisateurs', utilisateurRoutes);
 app.use('/api/projets', projetRoutes);
+app.use('/api/contact', emailRoutes);
 
 // Gestion des fichiers statiques
 app.use('/images', express.static(path.join(__dirname, 'images')));
