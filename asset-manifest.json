@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.6cc924ee.css",
-    "main.js": "/Portfolio/static/js/main.a2a683f7.js",
+    "main.css": "/Portfolio/static/css/main.992bdc9d.css",
+    "main.js": "/Portfolio/static/js/main.7d9ef0cd.js",
     "static/media/aboutImage.png": "/Portfolio/static/media/aboutImage.4e03fab459ef710f891d.png",
     "static/media/bgAbout.jpeg": "/Portfolio/static/media/bgAbout.cbbfc20800f9c7ba287f.jpeg",
     "static/media/PHP-logo.svg.png": "/Portfolio/static/media/PHP-logo.svg.1f32f22bff6c373c52fc.png",
@@ -12,11 +12,11 @@
     "static/media/Feedly-logo.png": "/Portfolio/static/media/Feedly-logo.a1ac47393657b1379196.png",
     "static/media/React-icon.svg.png": "/Portfolio/static/media/React-icon.svg.4f6dac908d982ea80341.png",
     "index.html": "/Portfolio/index.html",
-    "main.6cc924ee.css.map": "/Portfolio/static/css/main.6cc924ee.css.map",
-    "main.a2a683f7.js.map": "/Portfolio/static/js/main.a2a683f7.js.map"
+    "main.992bdc9d.css.map": "/Portfolio/static/css/main.992bdc9d.css.map",
+    "main.7d9ef0cd.js.map": "/Portfolio/static/js/main.7d9ef0cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cc924ee.css",
-    "static/js/main.a2a683f7.js"
+    "static/css/main.992bdc9d.css",
+    "static/js/main.7d9ef0cd.js"
   ]
 }
