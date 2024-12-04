@@ -147,6 +147,11 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+
+    img {
+      width: 250px !important;
+      height: 250px !important;
+    }
   }
 
   .about-content-dev {

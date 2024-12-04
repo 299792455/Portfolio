@@ -51,15 +51,13 @@ function App() {
               <ProfileCard />
             </section>
             <section id="skills">
-              <div className="skills-container">
-                <div className="wordcloud">
-                  <SkillBoxes />
-                </div>
-                <div className="timeline">
-                  <TimeLine />
-                </div>
-              </div>
-            </section>
+  <div className="skills-container">
+    <SkillBoxes />
+  </div>
+  <div className="timeline">
+    <TimeLine />
+  </div>
+</section>
             <section id="projets">
               <Projets />
             </section>
