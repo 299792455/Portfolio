@@ -1,35 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjetCard from './projetCard';
-import apiService from '../../services/apiService';
+import projetsData from './projet.json'; // Import direct du JSON
 
 const Projets = () => {
   const [projets, setProjets] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Simuler un chargement asynchrone (facultatif, pour suivre la logique existante)
     const fetchProjets = async () => {
-      try {
-        const response = await apiService.get('/projets');
-        setProjets(response.data);
-      } catch (err) {
-        setError('Erreur lors du chargement des projets.');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
+      setProjets(projetsData);
     };
 
     fetchProjets();
   }, []);
-
-  if (loading) {
-    return <p>Chargement des projets...</p>;
-  }
-
-  if (error) {
-    return <p>{error}</p>;
-  }
 
   return (
     <section id="projects">
@@ -38,7 +21,7 @@ const Projets = () => {
         {projets.length > 0 ? (
           projets.map((projet) => (
             <ProjetCard
-              key={projet._id}
+              key={projet._id.$oid || projet._id} // Utiliser $oid si présent
               projet={projet} // Passer l'objet projet complet
             />
           ))

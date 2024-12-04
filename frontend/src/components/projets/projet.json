@@ -1,0 +1,15 @@
+[{"_id":{"$oid":"674908ccea6bfac5a28b93f7"},
+"userId":"CPI","title":"The WorkShop",
+"description":"Mise en place API externe en PHP",
+"technologies":["PHP"],"githubLink":"https://cedmk1.dev/index.html",
+"imageUrls":["https://i.postimg.cc/FKRf6ZV4/default-2021-02-16-07594635-59a3-484f-8bd1-4c35463f8db5.jpg"],
+"date":"2024-11-30T00:00:00Z","genese":"Création d'une plateforme de gestion de vaisseaux spatiaux sur Star Citizen.",
+"problematique":"Développer une base de données avec la data officielle du jeu. Le site à été développé en PHP",
+"solution":"Mise en place de l'API externe en PHP, permettant la récupération des données sur star-citizen-wiki sur notre serveur afin de permettre les opérations CRUD futures. "
+},
+{"_id":{"$oid":"67490720ea6bfac5a28b93f5"},"userId":"CPI","title":"Résa Cyforce","description":"Application de réservation d'espace pour manège à cheval","technologies":["React","Node.js","MongoDB"],"githubLink":"https://github.com/299792455/Appli-R-sa-Cyforce","imageUrls":["https://i.postimg.cc/X7kp7h2W/Capture-d-cran-2024-11-23-155831.png"],"date":"2024-11-30T00:00:00Z","genese":"Création d'une application de gestion d'un planning pour un manège à chevaux.","problematique":"Gestion utilisateur, cheval et module de réservation","solution":"Développement d'un application sous la pile de stack MERN permettant de couvrir tous les besoins du client"},
+{"_id":{"$oid":"67490605ea6bfac5a28b93f4"},"userId":"CPI","title":"Mon vieux grimoire","description":"Application de notation de livres développée avec Node","technologies":["Node.js","MongoDB"],"githubLink":"https://github.com/299792455/P6---Mon-vieux-grimoire","imageUrls":["https://i.postimg.cc/VL8Jw1W4/vieux-grimoire.jpg"],"date":"2024-11-30T00:00:00Z","genese":"Projet Backend OpenClassRooms ","problematique":"Le serveur backend est à construire entièrement","solution":"Développer un serveur backend sous Node avec API pour permettre les opérations CRUD sur la BDD."},
+{"_id":{"$oid":"6744fda3ea6bfac5a28adbe8"},"userId":"CPI","title":"KASA APP","description":"Une application Web de location immobilière, construite avec React, Express.","technologies":["HTML","CSS","JavaScript"],"githubLink":"https://299792455.github.io/P5-Kasa/","imageUrls":["https://i.postimg.cc/6Qm7xvMG/oc-kasa-fromation-2021-project-857a7b9ac8bea6f78977.jpg"],"date":"2024-11-25T00:00:00Z","genese":"Projet Frontend OpenClassRooms","problematique":"Construire le frontend entièrement","solution":"Développer le frontend sous React"}
+
+]
+
