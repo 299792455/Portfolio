@@ -14,7 +14,7 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const response = await apiService.post('/contact/send-email', {
-        to: 'tonemail@gmail.com', // Ajoute une adresse email valide ici
+        to: '75017pi@gmail.com', // Ajoute une adresse email valide ici
         subject: `Message de ${formData.name}`,
         message: formData.message,
       });
