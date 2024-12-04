@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6cc924ee.css",
-    "main.js": "/static/js/main.3c67e12d.js",
+    "main.js": "/static/js/main.ce389270.js",
     "static/media/aboutImage.png": "/static/media/aboutImage.4e03fab459ef710f891d.png",
     "static/media/bgAbout.jpeg": "/static/media/bgAbout.cbbfc20800f9c7ba287f.jpeg",
     "static/media/PHP-logo.svg.png": "/static/media/PHP-logo.svg.1f32f22bff6c373c52fc.png",
@@ -13,10 +13,10 @@
     "static/media/React-icon.svg.png": "/static/media/React-icon.svg.4f6dac908d982ea80341.png",
     "index.html": "/index.html",
     "main.6cc924ee.css.map": "/static/css/main.6cc924ee.css.map",
-    "main.3c67e12d.js.map": "/static/js/main.3c67e12d.js.map"
+    "main.ce389270.js.map": "/static/js/main.ce389270.js.map"
   },
   "entrypoints": [
     "static/css/main.6cc924ee.css",
-    "static/js/main.3c67e12d.js"
+    "static/js/main.ce389270.js"
   ]
 }
