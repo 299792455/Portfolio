@@ -43,7 +43,7 @@ const About = () => {
         </div>
         <div className="about-CV">
   <h4>Envie d'en savoir plus ?</h4>
-  <a href={`${process.env.PUBLIC_URL}/Curriculum Vitae Christophe Pires BD.pdf`} download="Curriculum Vitae Christophe Pires BD.pdf" className="download-button">
+  <a href={`${process.env.PUBLIC_URL}/CV CPI.pdf`} download="CV CPI.pdf" className="download-button">
     <button>Télécharger mon CV</button>
   </a>
 </div>
