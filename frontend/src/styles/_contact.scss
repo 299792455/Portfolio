@@ -41,7 +41,7 @@
       align-items: center;
       justify-content: center;
       padding: 1rem 2rem;
-      width: 100%; // Largeur par défaut pour le bouton sur mobile
+      width: 30%; // Largeur par défaut pour le bouton sur mobile
       font-size: 1rem;
       color: white;
 
@@ -136,6 +136,10 @@
   form {
     width: 90%; // Formulaire prend 90% de la largeur sur mobile
     margin: 0 auto; // Centre le formulaire horizontalement
+
+    button {
+      width: 100% !important;
+    }
   }
 
   .social-links {
