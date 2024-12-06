@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.f3fa268c.css",
+    "main.css": "/Portfolio/static/css/main.46b75945.css",
     "main.js": "/Portfolio/static/js/main.6c9e7a10.js",
     "static/media/aboutImage.png": "/Portfolio/static/media/aboutImage.4e03fab459ef710f891d.png",
     "static/media/bgAbout.jpeg": "/Portfolio/static/media/bgAbout.cbbfc20800f9c7ba287f.jpeg",
@@ -12,11 +12,11 @@
     "static/media/Feedly-logo.png": "/Portfolio/static/media/Feedly-logo.a1ac47393657b1379196.png",
     "static/media/React-icon.svg.png": "/Portfolio/static/media/React-icon.svg.4f6dac908d982ea80341.png",
     "index.html": "/Portfolio/index.html",
-    "main.f3fa268c.css.map": "/Portfolio/static/css/main.f3fa268c.css.map",
+    "main.46b75945.css.map": "/Portfolio/static/css/main.46b75945.css.map",
     "main.6c9e7a10.js.map": "/Portfolio/static/js/main.6c9e7a10.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3fa268c.css",
+    "static/css/main.46b75945.css",
     "static/js/main.6c9e7a10.js"
   ]
 }
