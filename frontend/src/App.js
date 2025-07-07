@@ -13,7 +13,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutNow from './components/about/aboutNow';
 import PortfolioSlider from './components/projets/portfolioSlider';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Mentions from './pages/Mentions';
+import NotFound from './pages/NotFound';
+import { Navigate } from 'react-router-dom';
 
 function App() {
   const [showIntro, setShowIntro] = useState(false);
@@ -46,42 +49,52 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {showIntro ? (
-        <IntroScreen onFinish={handleIntroFinish} />
-      ) : (
-        <>
+     <Router>
+    <Routes>
+      <Route path="/portfolio" element={<Navigate to="/" />} />
+      <Route
+        path="/"
+        element={
+          showIntro ? (
+            <IntroScreen onFinish={handleIntroFinish} />
+          ) : (
+            <>
           <Header />
           <main>
             <section id="about">
               <ProfileCard />
             </section>
             <section id="skills">
-  <div className="skills-container">
-    
-  </div>
+              <div className="skills-container">
+                
+              </div>
 
-  <div className="timeline">
-    <AboutNow />
-  </div>
-</section>
-<section id="projets">
-  <div className="section-wrapper">
-    <PortfolioSlider />
-  </div>
-</section>
+              <div className="timeline">
+                <AboutNow />
+              </div>
+            </section>
+            <section id="projets">
+              <div className="section-wrapper">
+                <PortfolioSlider />
+              </div>
+            </section>
 
-<section id="contact">
-  <div className="section-wrapper">
-    <ContactForm />
-  </div>
-</section>
+            <section id="contact">
+              <div className="section-wrapper">
+                <ContactForm />
+              </div>
+            </section>
           </main>
           <Footer />
         </>
-      )}
-    </div>
-  );
+          )
+        }
+      />
+      <Route path="/mentions" element={<Mentions />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </Router>
+);
 }
 
 export default App;

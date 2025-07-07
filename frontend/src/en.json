@@ -7,6 +7,12 @@
 
   
   "allRightsReserved": "All rights reserved.",
+  "legalTitle": "Legal notice",
+  "legalEditor": "This website is published by Christophe P., freelance web developer, registered as a self-employed professional. All creations and content are original.",
+  "legalHosting": "Hosting: this site is hosted by Hostinger, 61 Lordou Vironos Street, 6023 Larnaca, Cyprus.",
+  "legalResponsibility": "Responsibility: despite careful content creation, some errors may remain. Please report any issues.",
+  "legalContact": "For any request or complaint, please use the contact form available on the homepage.",
+
 
   
   "systemStartup": "[System startup...]",
@@ -98,6 +104,4 @@
 
 "emailSuccess": "Email sent successfully! I'll get back to you soon!",
 "emailError": "Error while sending the message."
-
-
 }

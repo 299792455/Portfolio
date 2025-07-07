@@ -7,6 +7,17 @@
 
   
   "allRightsReserved": "Tous droits réservés.",
+  "legalTitle": "Mentions légales",
+  "legalEditor": "Ce site est édité par Christophe P., développeur web freelance, enregistré en tant qu’auto-entrepreneur. Toutes les créations et contenus présentés sont originaux.",
+  "legalHosting": "Hébergement : ce site est hébergé par Hostinger, 61 Lordou Vironos Street, 6023 Larnaca, Chypre.",
+  "legalResponsibility": "Responsabilité : malgré le soin apporté à la création du contenu, des erreurs peuvent subsister. N'hésitez pas à signaler toute anomalie.",
+  "legalContact": "Pour toute demande ou réclamation, veuillez utiliser le formulaire de contact disponible sur la page d’accueil.",
+
+
+
+  "notFound": "Oups... cette page n'existe pas.",
+  "backHome": "Revenir à l'accueil",
+
 
   
   "systemStartup": "[Démarrage du système...]",
@@ -90,5 +101,4 @@
 
 "emailSuccess": "Email envoyé avec succès !",
 "emailError": "Erreur lors de l’envoi du message."
-
 }
