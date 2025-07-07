@@ -94,7 +94,10 @@
 "project3_description": "Showcase site/portfolio for a promising young Galician DJ.",
 "project3_objective": "Mobile-optimized version, impactful design, agenda, audio player, contact form.",
 "project4_description": "Management platform for equestrian centers.",
-"project4_objective": "Calendar, bookings, user/admin/horse management, stats, notifications, etc."
+"project4_objective": "Calendar, bookings, user/admin/horse management, stats, notifications, etc.",
+
+"emailSuccess": "Email sent successfully! I'll get back to you soon!",
+"emailError": "Error while sending the message."
 
 
 }

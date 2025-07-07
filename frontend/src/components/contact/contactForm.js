@@ -3,8 +3,6 @@ import '../../styles/_contact.scss';
 import apiService from '../../services/apiService';
 import { useTranslation } from 'react-i18next';
 import Photo from '../../styles/images/CPI.jpg';
-
-// Import des logos
 import Git from '../../styles/images/Git.png';
 import X from '../../styles/images/X_logo_2023_(white).png';
 import LinkedIn from '../../styles/images/linkedin.png';
@@ -12,6 +10,7 @@ import LinkedIn from '../../styles/images/linkedin.png';
 const ContactForm = () => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [toast, setToast] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,10 +25,14 @@ const ContactForm = () => {
         subject: `Message de ${formData.name}`,
         message: formData.message,
       });
-      alert(response.data.message);
+      setToast(`✅ ${t('emailSuccess')}`);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setToast(''), 4000);
     } catch (error) {
       console.error('Erreur lors de l\'envoi du message:', error);
-      alert('Erreur lors de l\'envoi du message');
+      setToast(`❌ ${t('emailError')}`);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setToast(''), 4000);
     }
   };
 
@@ -67,11 +70,10 @@ const ContactForm = () => {
           </button>
         </form>
 
-        {/* SOCIAL LINKS MODIFIÉS */}
         <div className="social-links">
-            <div className="contact-photo">
-              <img src={Photo} alt="Ma photo" />
-            </div>
+          <div className="contact-photo">
+            <img src={Photo} alt="Ma photo" />
+          </div>
           <ul>
             <li>
               <a href="https://github.com/299792455" target="_blank" rel="noopener noreferrer">
@@ -91,6 +93,22 @@ const ContactForm = () => {
           </ul>
         </div>
       </div>
+
+      {toast && (
+        <div style={{
+          position: 'fixed',
+          bottom: '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: '#333',
+          color: '#fff',
+          padding: '1rem 2rem',
+          borderRadius: '8px',
+          zIndex: 9999
+        }}>
+          {toast}
+        </div>
+      )}
     </>
   );
 };

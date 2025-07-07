@@ -86,6 +86,9 @@
 "project3_description": "Site vitrine/Portfolio pour un jeune DJ galicien prometteur.",
 "project3_objective": "Version Mobile optimisée, style visuel impactant, agenda, player audio, formulaire de contact.",
 "project4_description": "Plateforme de gestion pour centres équestres.",
-"project4_objective": "Calendrier, réservations, gestion users/Admin/Chevaux, statistiques, notifications, etc."
+"project4_objective": "Calendrier, réservations, gestion users/Admin/Chevaux, statistiques, notifications, etc.",
+
+"emailSuccess": "Email envoyé avec succès !",
+"emailError": "Erreur lors de l’envoi du message."
 
 }
