@@ -70,5 +70,11 @@
   "focusPointCode": "Promo code",
   "focusPointDiscount": "Discount %",
   "focusPointLink": "Commercial offer link",
-  "focusPrivacy": "All this without collecting any personal data"
+  "focusPrivacy": "All this without collecting any personal data",
+
+  "aboutMeTitle": "Let’s talk about me…",
+  "aboutMeText": "I’m Christophe, a Web Developer crafting custom apps. After a first career in Business Development, I dedicated myself to my passion: designing and building original web solutions. I love turning ideas into real projects, with a special focus on code quality and UX.",
+  "aboutYouTitle": "Let’s talk about you…",
+  "aboutYouText": "Maybe you’re here out of curiosity, passion or with an idea in mind. Either way, if you’re exploring this space, we probably share the same interest: the web and its possibilities.",
+  "goNext": "Feel free to take a look at my projects ;)"
 }

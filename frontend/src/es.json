@@ -69,5 +69,13 @@
   "focusPointCode": "El código promocional",
   "focusPointDiscount": "El % de descuento",
   "focusPointLink": "El enlace de la oferta comercial",
-  "focusPrivacy": "Todo esto sin recolectar datos personales"
+  "focusPrivacy": "Todo esto sin recolectar datos personales",
+
+
+  "aboutMeTitle": "Hablemos de mí…",
+  "aboutMeText": "Soy Christophe, desarrollador React/Node y creador de aplicaciones web a medida. Tras una primera etapa en Business Development, me dediqué a mi pasión: imaginar y desarrollar soluciones digitales originales. Me encanta convertir ideas en proyectos reales, con especial atención a la calidad del código y la experiencia de usuario.",
+  "aboutYouTitle": "Hablemos de ti…",
+  "aboutYouText": "Quizá estés aquí por curiosidad, pasión o con una idea en mente. En cualquier caso, si exploras este universo, probablemente compartimos el mismo interés: la web y sus posibilidades.",
+  "goNext": "No dudes en echar un vistazo a mis proyectos ;)"
+
 }
