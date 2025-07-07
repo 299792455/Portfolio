@@ -49,7 +49,10 @@
  
   "developerDescription": "Christophe, Desarrollador FullStack React/Node basado en París.",
   "passionDescription": "Apasionado por la creación de aplicaciones web originales y de alto rendimiento.",
-  "developerTitle": "Christophe, Desarrollador FullStack React/Node basado en París.",
+  "developerTitle": "Christophe, Desarrollador FullStack React/Node.",
+
+  "intro-title": "FULLSTACK",
+  "intro-title outline": "DESARROLLO",
 
  
   "heroTitle1": "APLICACIONES",
@@ -76,6 +79,23 @@
   "aboutMeText": "Soy Christophe, desarrollador React/Node y creador de aplicaciones web a medida. Tras una primera etapa en Business Development, me dediqué a mi pasión: imaginar y desarrollar soluciones digitales originales. Me encanta convertir ideas en proyectos reales, con especial atención a la calidad del código y la experiencia de usuario.",
   "aboutYouTitle": "Hablemos de ti…",
   "aboutYouText": "Quizá estés aquí por curiosidad, pasión o con una idea en mente. En cualquier caso, si exploras este universo, probablemente compartimos el mismo interés: la web y sus posibilidades.",
-  "goNext": "No dudes en echar un vistazo a mis proyectos ;)"
+  "goNext": "No dudes en echar un vistazo a mis proyectos ;)",
+
+  "portfolioTitle": "Proyectos",
+  "portfolioSubtitle": "Descubre mis últimos casos de cliente y las soluciones desarrolladas para ellos",
+  "viewCase": "Ver proyecto",
+  "modalObjective": "Objetivo:",
+  "modalStack": "Stack utilizada:",
+
+  "project1_description": "Extensión para extraer ofertas comerciales de YouTube.",
+"project1_objective": "Escanea la página, detecta patrones de venta, extrae ofertas y muestra info útil.",
+"project2_description": "Sitio web moderno para una agencia de comunicación en línea.",
+"project2_objective": "Presentar empresa y servicios, transmitir branding exclusivo, formulario de contacto.",
+"project3_description": "Sitio vitrina/portfolio para un joven DJ gallego prometedor.",
+"project3_objective": "Versión móvil optimizada, estilo visual impactante, agenda, reproductor, contacto.",
+"project4_description": "Plataforma de gestión para centros ecuestres.",
+"project4_objective": "Calendario, reservas, gestión de usuarios/admin/caballos, estadísticas, notificaciones, etc."
+
+
 
 }

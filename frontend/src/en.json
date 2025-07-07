@@ -52,6 +52,9 @@
   "passionDescription": "Passionate about creating original and high-performance web applications.",
   "developerTitle": "Christophe, FullStack React/Node Developer based in Paris.",
 
+  "intro-title": "FULLSTACK",
+  "intro-title outline": "DEVELOPMENT",
+
   
   "heroTitle1": "APPLICATIONS",
   "heroTitle2": "WEBSITES",
@@ -76,5 +79,22 @@
   "aboutMeText": "I’m Christophe, a Web Developer crafting custom apps. After a first career in Business Development, I dedicated myself to my passion: designing and building original web solutions. I love turning ideas into real projects, with a special focus on code quality and UX.",
   "aboutYouTitle": "Let’s talk about you…",
   "aboutYouText": "Maybe you’re here out of curiosity, passion or with an idea in mind. Either way, if you’re exploring this space, we probably share the same interest: the web and its possibilities.",
-  "goNext": "Feel free to take a look at my projects ;)"
+  "goNext": "Feel free to take a look at my projects ;)",
+
+  "portfolioTitle": "Projects",
+  "portfolioSubtitle": "Discover my latest client cases and the solutions developed for them",
+  "viewCase": "View Case",
+  "modalObjective": "Objective:",
+  "modalStack": "Tech stack used:",
+
+  "project1_description": "Extension for extracting commercial offers from YouTube.",
+"project1_objective": "Scan the page, identify sales patterns, extract offers, display key info.",
+"project2_description": "Modern showcase site for an online communication agency.",
+"project2_objective": "Present the company & services, deliver a strong exclusive branding, contact form.",
+"project3_description": "Showcase site/portfolio for a promising young Galician DJ.",
+"project3_objective": "Mobile-optimized version, impactful design, agenda, audio player, contact form.",
+"project4_description": "Management platform for equestrian centers.",
+"project4_objective": "Calendar, bookings, user/admin/horse management, stats, notifications, etc."
+
+
 }

@@ -50,7 +50,8 @@
   "developerDescription": "Christophe, Développeur Web React-Node.",
   "passionDescription": "Passionné par la création d'applications web originales et performantes.",
 
-
+  "intro-title": "FULLSTACK",
+  "intro-title outline": "DEVELOPPEMENT",
   
   "heroTitle1": "DEVELOPPEMENT",
   "heroTitle2": "FULLSTACK",
@@ -70,5 +71,21 @@
   "focusPointCode": "Le code promo",
   "focusPointDiscount": "Le % de réduction",
   "focusPointLink": "Le lien de l’offre commerciale",
-  "focusPrivacy": "Le tout sans collecter de données personnelles"
+  "focusPrivacy": "Le tout sans collecter de données personnelles",
+
+  "portfolioTitle": "Réalisations",
+  "portfolioSubtitle": "Découvrez mes derniers cas clients et les solutions développées pour eux",
+  "viewCase": "Voir le projet",
+  "modalObjective": "Objectif :",
+  "modalStack": "Stack utilisée :",
+
+  "project1_description": "Extension d'extraction des offres commerciales Youtube.",
+"project1_objective": "Scanner la page, identifiez les patterns de vente, extraire les offres, affichage des infos pertinentes.",
+"project2_description": "Création d'une vitrine moderne pour une agence de communication en ligne.",
+"project2_objective": "Présenter Entreprise & Services, transmettre un branding pro & exclusif, formulaire de contact.",
+"project3_description": "Site vitrine/Portfolio pour un jeune DJ galicien prometteur.",
+"project3_objective": "Version Mobile optimisée, style visuel impactant, agenda, player audio, formulaire de contact.",
+"project4_description": "Plateforme de gestion pour centres équestres.",
+"project4_objective": "Calendrier, réservations, gestion users/Admin/Chevaux, statistiques, notifications, etc."
+
 }

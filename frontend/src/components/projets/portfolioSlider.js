@@ -1,52 +1,56 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import '../../styles/PortfolioSlider.css';
+import { useTranslation } from 'react-i18next';
+
 
 const slides = [
   {
     image: "https://i.postimg.cc/qRxQ15SW/Extension-deal-Scout-OS.png",
     title: "DealScout",
     link: "#",
-    description: "Extension d'extraction des offres commerciales Youtube.",
-    objectif: "Scanner la page, identifiez les patterns de vente, extraire les offres, affichage des infos pertinentes.",
+    descriptionKey: "project1_description",
+    objectifKey: "project1_objective",
     stack: ["JavaScript", "Chrome API", "Regex", "AI lite"],
   },
   {
     image: "https://i.postimg.cc/yYdnTnPr/Online-Dreams-Makers-Agency.png",
     title: "Agence OnlineDreamsMakers",
     link: "https://www.onlinedreamsmakers.es/",
-    description: "Création d'une vitrine moderne pour une agence de communication en ligne.",
-    objectif: "Présenter Entreprise & Services, transmettre un branding pro & exclusif, formulaire de contact",
+    descriptionKey: "project2_description",
+    objectifKey: "project2_objective",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion", "VPS + Docker"],
   },
   {
     image: "https://i.postimg.cc/63cLrGGX/DJ-Sergio-Telmo.png",
     title: "DJ Sergio Telmo",
     link: "https://djsergiotelmo.com/",
-    description: "Site vitrine/Portfolio pour un jeune DJ galicien prometteur.",
-    objectif: "Version Mobile optimisée, style visuel impactant, agenda, player audio, formulaire de contact.",
+    descriptionKey: "project3_description",
+    objectifKey: "project3_objective",
     stack: ["Next.js", "Tailwind CSS", "Swiper.js", "Framer Motion"],
   },
   {
     image: "https://i.postimg.cc/BQk5B3tX/Application-Equi-X.png",
     title: "Application EquiX (En Développement)",
     link: "#",
-    description: "Plateforme de gestion pour centres équestres.",
-    objectif: "Calendrier, réservations, gestion users/Admin/Chevaux, statistiques, notifications, etc.",
+    descriptionKey: "project4_description",
+    objectifKey: "project4_objective",
     stack: ["React", "Next.js", "MongoDB", "Big Calendar"],
   },
 ];
 
+
 function PortfolioSlider() {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section className="portfolio-slider">
       <div className="slider-header">
        
-        <h2>Réalisations</h2>
-        <p>Découvrez mes derniers cas clients et les solutions développées pour eux</p>
+        <h2>{t('portfolioTitle')}</h2>
+        <p>{t('portfolioSubtitle')}</p>
       </div>
 
       <div className="slider-container">
@@ -67,7 +71,7 @@ function PortfolioSlider() {
       <div className="slider-info">
         <h3>{slides[index].title}</h3>
         <a href={slides[index].link} target="_blank" rel="noopener noreferrer">
-          View Case
+          {t('viewCase')}
         </a>
       </div>
 
@@ -93,10 +97,10 @@ function PortfolioSlider() {
           >
             <button className="close-btn" onClick={() => setShowModal(false)}>✕</button>
             <h3>{slides[index].title}</h3>
-            <p>{slides[index].description}</p>
-            <strong>Objectif :</strong>
-            <p>{slides[index].objectif}</p>
-            <strong>Stack utilisée :</strong>
+            <p>{t(slides[index].descriptionKey)}</p> 
+            <strong>{t('modalObjective')}</strong>
+            <p>{t(slides[index].objectifKey)}</p>
+            <strong>{t('modalStack')}</strong>
             <div className="stack-list">
               {slides[index].stack.map((tech, idx) => (
                 <span key={idx}>{tech}</span>

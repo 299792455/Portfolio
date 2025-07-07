@@ -39,10 +39,10 @@ const AboutNow = () => {
       
       <div className="hero-top">
         <h1 className="intro-title" ref={el => (titlesRef.current[1] = el)}>
-          {t('heroTitle2')}
+          {t('intro-title')}
         </h1>
         <h1 className="intro-title outline" ref={el => (titlesRef.current[0] = el)}>
-          {t('heroTitle1')}
+          {t('intro-title outline')}
         </h1>
         
         <SkillBoxes />
