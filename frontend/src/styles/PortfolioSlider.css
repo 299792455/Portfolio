@@ -1,0 +1,128 @@
+
+
+.portfolio-slider {
+
+  
+  color: #fff;
+  text-align: center;
+}
+
+
+  h2 {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: bold;
+    color: #ffffff; /* Texte plein blanc */
+    margin: 0 0 3rem 0;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+
+    /* On supprime le ::after */
+    &::after {
+      content: none;
+    }
+  }
+
+.slider-header p {
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.slide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.slider-info {
+  margin: 1.5rem 0;
+}
+
+.slider-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slider-info a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 0.25rem;
+  background: #555;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.125rem;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.stack-list span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}

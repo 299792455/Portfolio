@@ -3,53 +3,83 @@
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre verticalement tout le contenu */
-  justify-content: center; /* Centre les items horizontalement */
+  align-items: center;
+  justify-content: center;
+
   h2 {
     font-size: 2.3rem;
     margin-bottom: 2rem;
-    color: #ffffff; /* Couleur du titre */
+    color: #ffffff;
   }
 
   .skills-container {
     display: flex;
-  justify-content: center; /* Centre les éléments horizontalement */
-  flex-wrap: wrap;
-  gap: 2rem; /* Espacement entre les éléments */
-  margin: 0 auto; /* Centre horizontalement */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
   }
-
 
   .skill-box {
     position: relative;
-    padding: 0.5rem;
+    padding: 1rem 1rem ; // ⇦ modif : plus de respiration
     background: #121212;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 300px;
-    height: 100px;
+    height: auto;
+    margin-bottom: 1rem; // ⇦ modif : espacement entre blocs
+    margin-top: 3rem;
 
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       color: #ffffff;
-      align-self: center; /* Centre le texte horizontalement */
-      margin-top: 0; /* Supprime tout écart au-dessus */
+      align-self: center;
+      letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 1rem;
+      margin: 10px 0 5px;
     }
 
     .icons {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center; /* Centre les icônes */
+      flex-direction: column;
+      align-items:left; // ⇦ modif : centre les items
       gap: 1rem;
+      padding: 20px;
+      padding-bottom: 0;
+      
 
-      .skill-icon {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease-in-out;
+      .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: background 0.3s ease;
+        padding: 0.3rem 0.5rem;
+        border-radius: 8px;
 
         &:hover {
-          transform: scale(1.2);
+          background: rgba(255, 255, 255, 0.05); // ⇦ modif : effet hover global
+        }
+
+        .skill-icon {
+          width: 50px;
+          height: 50px;
+          max-height: 50px;
+          object-fit: contain;
+
+          transition: transform 0.3s ease-in-out;
+          border-radius: 10px;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        .skill-label {
+          color: #f0f0f0; // ⇦ modif : texte plus lisible
+          font-size: 1.1rem;
+          font-weight: 500;
         }
       }
     }
@@ -66,7 +96,7 @@
       background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0) 50%,
-        rgba(228, 122, 69, 0.8) 60%,
+        rgba(21, 245, 234, 0.8) 60%,
         rgba(0, 0, 0, 0) 70%
       );
       background-size: 200% 200%;
@@ -85,7 +115,7 @@
       border-radius: inherit;
       background: #121212;
       z-index: 2;
-      margin: 1px; /* Laisser apparaître la bordure lumineuse */
+      margin: 1px;
     }
 
     * {
@@ -104,5 +134,28 @@
     .skill-box {
       width: 100%;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .skill-item {
+    margin-bottom: 1.3rem; /* Plus d’espace sur très grands écrans */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem; // ⇦ un peu plus d’espace entre les blocs
+  }
+
+  .skill-box {
+    width: 90%;
+    max-width: 320px; // ⇦ garde une largeur confortable
+  }
+
+  .icons {
+    align-items: flex-start; // ⇦ réaligne à gauche si tu préfères sur petit écran
   }
 }

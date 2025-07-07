@@ -10,41 +10,55 @@ import CssIcon from '../../styles/images/CSS.png';
 import MongoIcon from '../../styles/images/Mongodb.png';
 import ExpressIcon from '../../styles/images/Express.png';
 import GitIcon from '../../styles/images/Git.png';
-import PhpIcon from '../../styles/images/PHP-logo.svg.png'
-import VsIcon from '../../styles/images/Visual_Studio_Code.png'
-import FeedlyIcon from '../../styles/images/Feedly-logo.png'
+import PhpIcon from '../../styles/images/PHP-logo.svg.png';
+import VsIcon from '../../styles/images/Visual_Studio_Code.png';
+import FeedlyIcon from '../../styles/images/Feedly-logo.png';
+import NotionIcon from '../../styles/images/notion.png';
+import { useTranslation } from 'react-i18next';
 
 const SkillBoxes = () => {
+  const { t } = useTranslation();
+
+  const renderSkill = (src, alt, label) => (
+    <div className="skill-item">
+      <img src={src} alt={alt} className="skill-icon" />
+      <span className="skill-label">{label}</span>
+    </div>
+  );
+
   return (
     <div id="skills">
-      <h2>Développement Web FullStack avec 5 ans d'expérience</h2>
       <div className="skills-container">
         {/* Frontend Section */}
         <div className="skill-box frontend">
-          <h3>Frontend</h3>
+          <h3>{t('Frontend')}</h3>
           <div className="icons">
-            <img src={ReactIcon} alt="React" className="skill-icon" />
-            <img src={HtmlIcon} alt="HTML5" className="skill-icon" />
-            <img src={CssIcon} alt="CSS3" className="skill-icon" />
-            <img src={JsIcon} alt="JavaScript" className="skill-icon" />
+            {renderSkill(ReactIcon, 'React', 'React')}
+            {renderSkill(HtmlIcon, 'HTML5', 'HTML5')}
+            {renderSkill(CssIcon, 'CSS3', 'CSS3')}
+            {renderSkill(JsIcon, 'JavaScript', 'JavaScript')}
           </div>
         </div>
+
         {/* Backend Section */}
         <div className="skill-box backend">
-          <h3>Backend</h3>
+          <h3>{t('Backend')}</h3>
           <div className="icons">
-            <img src={NodeIcon} alt="Node.js" className="skill-icon" />
-            <img src={ExpressIcon} alt="Express" className="skill-icon" />
-            <img src={MongoIcon} alt="MongoDB" className="skill-icon" />
-            <img src={PhpIcon} alt="PHP" className="skill-icon" />
+            {renderSkill(NodeIcon, 'Node.js', 'Node.js')}
+            {renderSkill(ExpressIcon, 'Express', 'Express')}
+            {renderSkill(MongoIcon, 'MongoDB', 'MongoDB')}
+            {renderSkill(PhpIcon, 'PHP', 'PHP')}
           </div>
         </div>
+
+        {/* Tools Section */}
         <div className="skill-box Outils">
-          <h3>Outils</h3>
+          <h3>{t('Tools')}</h3>
           <div className="icons">
-            <img src={VsIcon} alt="VsCode" className="skill-icon" />
-            <img src={GitIcon} alt="Git" className="skill-icon" />
-            <img src={FeedlyIcon} alt="Feedly" className="skill-icon" />
+            {renderSkill(NotionIcon, 'Notion', 'Notion')}
+            {renderSkill(GitIcon, 'Git', 'Git')}
+            {renderSkill(FeedlyIcon, 'Feedly', 'Feedly')}
+            {renderSkill(VsIcon, 'VsCode', 'VS Code')}
           </div>
         </div>
       </div>

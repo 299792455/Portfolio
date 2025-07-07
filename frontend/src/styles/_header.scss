@@ -1,29 +1,30 @@
 @import './variables';
 
 header {
-  display: flex;
-  justify-content: space-between; // Sépare le logo et les liens
-  align-items: center; // Centre verticalement le contenu
-  padding: 10px 30px; // Ajuste les marges internes
-  width: 100%; // Prend toute la largeur de l'écran
-  max-width: 1440px; // Limite à 1440px sur les grands écrans
-  margin: 0 auto; // Centre le header sur les grands écrans
-  background-color: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #04060fd8;
+  padding: 10px 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed; // Fixe le header en haut de la page
-  z-index: 1000; // Assure que le header passe au-dessus des autres éléments
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 
   .logo {
     img {
-      height: 60px; // Ajuste la taille du logo
-      width: auto; // Maintient les proportions
+      height: 60px;
+      width: auto;
       border-radius: 60px;
     }
   }
 
   .burger-menu {
-    display: none; // Caché sur les grands écrans
+    display: none;
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
@@ -31,81 +32,187 @@ header {
 
   nav {
     ul {
-      display: flex; // Met les liens sur une ligne
-      list-style: none; // Supprime les puces
+      display: flex;
+      list-style: none;
       margin: 0;
       padding: 0;
 
       li {
-        margin-left: 20px; // Espacement entre les liens
+        margin-left: 30px;
 
         a {
-          color: white; // Couleur du texte
+          color: white;
           text-decoration: none;
           font-weight: bold;
 
           &:hover {
-            color: $primary-color; // Couleur au survol
+            color: $primary-color;
           }
+        }
+      }
+    }
+  }
+
+  .language-selector {
+    position: relative;
+
+    .language-dropdown {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      .language-button {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 10px;
+        background-color: #00000000;
+        color: white;
+        border-radius: 5px;
+        border-color: white;
+        border: 1px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      .language-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 150px;
+        margin-top: 5px;
+        z-index: 9999;
+
+        .language-option {
+          padding: 10px;
+          text-align: left;
+          color: white;
+          background-color: #000;
+          border: none;
+          width: 100%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #444;
+          }
+        }
+
+        &.open {
+          display: block;
         }
       }
     }
   }
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
 /* Styles pour les mobiles */
 @media (max-width: 768px) {
   header {
-    justify-content: flex-end; // Aligne le menu burger à droite
+    justify-content: flex-end;
     padding: 10px 20px;
-    background-color: #00000000;
 
     .logo {
-      display: none; // Cache le logo sur mobile
+      display: none;
     }
 
     .burger-menu {
-      display: block; // Affiche le menu burger
+      display: block;
       margin-right: 30px;
-      border: 1px solid white;
-      border-radius: 5px;
-      background-color: #000000;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
     }
   }
 
   nav {
-    display: none; // Masque le menu par défaut
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background-color: #000000;
+    background-color: #000;
     position: absolute;
-    top: 60px; // Place le menu sous le header
+    top: 60px;
     left: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 20px;
 
     &.open {
-      display: flex; // Affiche le menu lorsque la classe "open" est active
+      display: flex;
     }
 
     ul {
-      flex-direction: column; // Empile les liens en colonne
+      flex-direction: column;
       width: 100%;
       margin: 0;
       padding: 0;
       list-style: none;
 
       li {
-        margin: 10px 0; // Espacement entre les liens
+        margin: 10px 0;
 
         a {
-          display: block; // Chaque lien occupe une ligne entière
-          text-align: left; // Alignement à gauche
-          width: 100%; // Occupe toute la largeur disponible
-          padding: 10px; // Agrandit la zone cliquable
+          display: block;
+          text-align: left;
+          width: 100%;
+          padding: 10px;
         }
       }
     }
   }
 }
+
+@media (max-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .menu-burger {
+      display: block;
+      margin-right: 30px;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .language-switcher {
+      order: 2;
+    }
+
+    .logo {
+      display: none; // à retirer si tu veux garder le logo
+    }
+  }
+}
+

@@ -2,11 +2,12 @@
 @import './mixins';
 
 footer {
-  background-color: #000000;
+  background-color: #0000006e;
   color: #fff;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
-
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   p {
     margin: 0.5rem 0;
   }

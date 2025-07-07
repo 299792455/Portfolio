@@ -1,0 +1,74 @@
+{
+  
+  "aboutMe": "HOME",
+  "skills": "SKILLS",
+  "projects": "PROJECTS",
+  "contact": "CONTACT",
+
+  
+  "allRightsReserved": "All rights reserved.",
+
+  
+  "systemStartup": "[System startup...]",
+  "quantumGravityInitialization": "[Quantum gravity modules initialization...OK!]",
+  "muscleFundamentalsCheck": "[Muscle fundamentals check...OK USA!]",
+  "pilotLoading": "[Pilot loading...OK!]",
+  "bovisFrequencyCheck": "[Bovis frequency check...FAILURE!]",
+  "serverConnection": "[Server connection...OK!]",
+  "pncsAtTheGates": "[PNCs at the gates...OK!]",
+  "servicesStarting": "[Services starting...OK!]",
+  "systemCheckComplete": "[System check complete.]",
+  "zipiziCheck": "[3x + 1 = izipizi...OK!]",
+  "minitelLoading": "[Minitel loading...OK!]",
+  "cigErrorInitialization": "[CIG 30k error initialization...OK!]",
+  "backendLoading": "[Backend loading...OK!]",
+  "electrolytesStabilization": "[Electrolytes stabilization...FAILURE!]",
+  "frontendLoading": "[Frontend loading...OK!]",
+  "introScreenLimit": "[IntroScreen limited to 4 Refresh...OK!]",
+  "applicationLaunch": "[Application launching...]",
+  "successMessage": "...Success! The Yes needs the No to win against the No.",
+
+  
+  "projectDetails": "Project Details",
+  "genesis": "Genesis",
+  "problem": "Problem",
+  "solution": "Solution",
+  "seeProject": "See the project",
+  "loadingProjects": "Loading projects...",
+  "projectsError": "Error loading projects.",
+  "noProjects": "No projects available at the moment.",
+
+  
+  "contactFormTitle": "LET'S TALK..",
+  "yourName": "Your name",
+  "yourEmail": "Your email",
+  "yourMessage": "Your message",
+  "send": "Send",
+  "contactDescription": "Advice, project ideas or a simple existential question — it all starts with a message.",
+
+
+  
+  "developerDescription": "Christophe, FullStack React/Node Developer based in Paris.",
+  "passionDescription": "Passionate about creating original and high-performance web applications.",
+  "developerTitle": "Christophe, FullStack React/Node Developer based in Paris.",
+
+  
+  "heroTitle1": "APPLICATIONS",
+  "heroTitle2": "WEBSITES",
+  "heroTitle3": "OPTIMIZATION",
+  "helloLabel": "HELLO, MY NAME IS CHRISTOPHE",
+  "helloSubtext": "Full-time Web Developer and former Business Developer",
+  "helloDescription": "I create applications and websites for all audiences. I also develop Open Source projects, such as DealScout — a browser extension that displays YouTube video deals in one click.",
+  "helloCompany": "In parallel I am developing a management application, EquiX, for professional stables",
+  "stackLabel": "Preferred stacks:",
+  "stackNote": "*NB: The best stack is the one requested by the client.",
+
+ 
+  "focusTitle": "FOCUS...",
+  "focusProjectTitle": "Chrome Extension DealScout",
+  "focusIntro": "Development of an Open Source browser extension that displays the 3 key elements of a YouTube video deal in one click:",
+  "focusPointCode": "Promo code",
+  "focusPointDiscount": "Discount %",
+  "focusPointLink": "Commercial offer link",
+  "focusPrivacy": "All this without collecting any personal data"
+}

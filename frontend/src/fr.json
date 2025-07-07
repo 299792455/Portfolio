@@ -1,0 +1,74 @@
+{
+  
+  "aboutMe": "HOME",
+  "skills": "COMPETENCES",
+  "projects": "PROJETS",
+  "contact": "CONTACT",
+
+  
+  "allRightsReserved": "Tous droits réservés.",
+
+  
+  "systemStartup": "[Démarrage du système...]",
+  "quantumGravityInitialization": "[Initialisation des modules de gravité quantique...OK!]",
+  "muscleFundamentalsCheck": "[Vérification des fondamentaux musculaires...OK USA!]",
+  "pilotLoading": "[Chargement des pilotes...OK!]",
+  "bovisFrequencyCheck": "[Vérification de la fréquence BOVIS...FAILURE!]",
+  "serverConnection": "[Connexion aux serveurs...OK!]",
+  "pncsAtTheGates": "[PNCs aux portes...OK!]",
+  "servicesStarting": "[Démarrage des services...OK!]",
+  "systemCheckComplete": "[Vérification du système terminée.]",
+  "zipiziCheck": "[3x + 1 = izipizi...OK!]",
+  "minitelLoading": "[Chargement du minitel des internets...OK!]",
+  "cigErrorInitialization": "[Initialisation ERROR CIG 30k...OK!]",
+  "backendLoading": "[Chargement du backend...OK!]",
+  "electrolytesStabilization": "[Stabilisation des electrolytes...FAILURE!]",
+  "frontendLoading": "[Chargement du frontend...OK!]",
+  "introScreenLimit": "[IntroScreen limité à 4 Refresh...OK!]",
+  "applicationLaunch": "[Lancement de l'application...]",
+  "successMessage": "...Success! The Yes needs the No to win against the No.",
+
+  
+  "projectDetails": "Détails du projet",
+  "genesis": "Genèse",
+  "problem": "Problématique",
+  "solution": "Solution",
+  "seeProject": "Voir le projet",
+  "loadingProjects": "Chargement des projets...",
+  "projectsError": "Erreur lors du chargement des projets.",
+  "noProjects": "Aucun projet disponible pour le moment.",
+
+  
+  "contactFormTitle": "PARLONS..",
+  "contactDescription":"Conseils, idées de projets ou simple question existentielle — tout commence par un message.",
+  "yourName": "Votre nom",
+  "yourEmail": "Votre email",
+  "yourMessage": "Votre message",
+  "send": "Envoyer",
+
+ 
+  "developerDescription": "Christophe, Développeur Web React-Node.",
+  "passionDescription": "Passionné par la création d'applications web originales et performantes.",
+
+
+  
+  "heroTitle1": "DEVELOPPEMENT",
+  "heroTitle2": "FULLSTACK",
+  "heroTitle3": "OPTIMISATION",
+"aboutMeTitle": "Parlons de moi…",
+"aboutMeText": "Je suis Christophe, développeur Web et créateur d’applications sur-mesure. Après une première carrière en Business Development, j’ai choisi de me consacrer à ma passion : imaginer et développer des solutions numériques originales et performantes. J’aime transformer les idées en projets concrets, avec une attention particulière pour la qualité du code et l’expérience utilisateur.",
+"aboutYouTitle": "Parlons de vous…",
+"aboutYouText": "Peut-être êtes-vous ici par curiosité, par passion ou avec une idée en tête. Quoi qu’il en soit, si vous explorez cet univers, c’est que nous partageons sûrement le même intérêt : le web et ses possibilités.",
+"goNext":"N'hésitez pas à jeter un oeil sur les projets ;)",
+  "stackLabel": "Stacks* de prédilections :",
+  "stackNote": "*NB: La meilleure stack est celle que demande le client.",
+
+  
+  "focusOnDealScout": "Focus sur DealScout..",
+  "focusProjectTitle": "Extension Chrome DealScout",
+  "focusIntro": "Développement d’une extension Web en OpenSource qui affiche en 1 clic les 3 informations indispensables de l'offre commerciale de la vidéo YouTube regardée :",
+  "focusPointCode": "Le code promo",
+  "focusPointDiscount": "Le % de réduction",
+  "focusPointLink": "Le lien de l’offre commerciale",
+  "focusPrivacy": "Le tout sans collecter de données personnelles"
+}

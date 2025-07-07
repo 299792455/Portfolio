@@ -1,234 +1,139 @@
-/* timeline.scss */
-
 .about-container {
   display: flex;
-  align-items: flex-start; /* Alignement au début pour éviter l'étirement inattendu */
   justify-content: space-between;
+  gap: 40px;
   padding: 40px 20px;
-  gap: 20px;
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  align-items: flex-start;
+}
+
+.timeline-container {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-photo {
+  align-self: flex-start;
+  margin-bottom: 20px;
 
   img {
     width: 250px;
     height: 250px;
+    border-radius: 50%;
+    border: 2px solid #2cd1b9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.timeline-line {
+  position: absolute;
+  top: 250px; // 🔁 mets ici exactement la hauteur de l'image (250px)
+  left: 125px;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% - 250px); // 🔁 identique ici pour cohérence
+  background-color: #2cd1b9;
+  z-index: 0;
+}
+.timeline-events {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-event {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-date {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: #2cd1b9;
+  background-color: #121212;
+  z-index: 2;
+}
+
+.timeline-text {
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.about-content-dev {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #121212;
+  color: white;
+
+  .about-content {
+    flex-grow: 1;
+    text-align: justify;
+    overflow-y: auto;
+    padding-right: 10px;
   }
 
-  .about-content-dev {
-    display: flex;
-    border-radius: 10px;
-    border: 1px solid black;
+  .about-CV {
+    margin-top: 20px;
     padding: 20px;
-    gap: 20px;
-    width: 70%;
-    align-items: flex-start;
-    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
 
-    .about-Img {
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      text-align: justify;
-      height: 500px;
-      overflow-y: auto;
-      padding-right: 10px;
+    button {
+      margin-top: 10px;
     }
   }
+}
 
-  .about-parcours {
-    display: flex;
+@media (max-width: 992px) {
+  .about-container {
     flex-direction: column;
-    width: 28%;
-    box-sizing: border-box;
+    align-items: center;
+  }
 
-    @media (max-width: 768px) {
-      width: 100%;
-      margin-top: 20px;
+  .timeline-container {
+    width: 100%;
+    align-items: center;
+
+    .timeline-line {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .about-parcours-content {
-      border-radius: 10px;
-      border: 1px solid black;
-      padding: 20px;
-      text-align: justify;
-      box-sizing: border-box;
+    .timeline-event {
+      grid-template-columns: 1fr;
+      text-align: center;
 
-      h3 {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      ul {
-        padding-left: 20px;
-        margin: 0;
-        word-wrap: break-word;
-      }
-
-      li {
-        word-wrap: break-word;
+      .timeline-date {
         margin-bottom: 10px;
       }
-    }
 
-    .about-CV {
-      position: relative;
-      border-radius: 12px;
-      border: 1px solid black;
-      background: #121212;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      padding-bottom: 20px;
-      
-      
-
-      /* Bordure lumineuse animée */
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0) 50%,
-          rgba(44, 209, 185, 0.8) 60%,
-          rgba(0, 0, 0, 0) 70%
-        );
-        background-size: 200% 200%;
-        z-index: 1;
-        animation: singleRay 3s linear infinite;
-        box-shadow: 0 0 8px rgba(44, 209, 185, 0.4);
+      .timeline-text {
+        padding-left: 0;
       }
-
-      /* Masque pour le contenu */
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: inherit;
-        background: #121212;
-        z-index: 2;
-        margin: 1px;
-      }
-
-      /* Pour que le contenu reste visible */
-      > * {
-        position: relative;
-        z-index: 3;
-      }
-    }
-  }
-
-  /* Animation pour la bordure lumineuse */
-  @keyframes singleRay {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 200% 50%;
-    }
-  }
-}
-
-/* Styles pour les écrans mobiles */
-@media (max-width: 1200px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-
-    img {
-      width: 250px !important;
-      height: 250px !important;
     }
   }
 
   .about-content-dev {
-    width: 100% !important;
-    flex-direction: column;
-    padding: 0;
-
-    .about-content {
-      height: auto;
-      padding-right: 0;
-    }
-  }
-
-  .about-parcours {
     width: 100%;
-    padding: 0;
-
-    .about-parcours-content {
-      width: 100%;
-      padding: 20px 15px;
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      ul {
-        padding-left: 20px;
-      }
-    }
-
-    .about-CV {
-      width: 100%;
-      
-    }
-  }
-
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    
-  }
-
-  .about-content-dev {
-    width: 100%;
-    flex-direction: column;
-    padding: 0;
-
-    .about-content {
-      height: auto;
-      padding-right: 0;
-    }
-  }
-
-  .about-parcours {
-    width: 100%;
-    padding: 0;
-
-    .about-parcours-content {
-      width: 100%;
-      padding: 20px 15px;
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      ul {
-        padding-left: 20px;
-      }
-    }
-
-    .about-CV {
-      width: 100%;
-      
-    }
+    margin-top: 30px;
   }
 }

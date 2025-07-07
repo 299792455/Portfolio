@@ -1,0 +1,99 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 200px;
+    width: 380px;
+    height: 420px;
+  }
+  
+  /* Positionnements circulaires pour 6 items (5 projets + 1 GitHub) */
+  .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(500px); }
+  .carousel-item:nth-child(2) { transform: rotateY(60deg) translateZ(500px); }
+  .carousel-item:nth-child(3) { transform: rotateY(120deg) translateZ(500px); }
+  .carousel-item:nth-child(4) { transform: rotateY(180deg) translateZ(500px); }
+  .carousel-item:nth-child(5) { transform: rotateY(240deg) translateZ(500px); }
+  .carousel-item:nth-child(6) { transform: rotateY(300deg) translateZ(500px); }
+  
+  .carousel-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  
+    button {
+      background-color: #121212;
+      color: #fff;
+      border: 2px solid #15f5ea;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: rgba(21, 245, 234, 0.1);
+      }
+    }
+  }
+  
+  /* Github card styles optionnel */
+  .github-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    h3 {
+      margin-bottom: 0.5rem;
+      color: #15f5ea;
+    }
+  
+    p {
+      color: #ffffff;
+    }
+  }
+  
+  .projet-card {
+    width: 100%;   // Utilise la largeur du parent carousel-item
+    height: 100%;
+    background: #121212;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    will-change: transform;
+  
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px black;
+    }
+  
+    .projet-image {
+      width: 100%;
+      height: 90%; // Plus de hauteur pour l'image
+      object-fit: cover;
+      border-radius: 0;
+      transition: transform 0.3s ease;
+    }
+  }

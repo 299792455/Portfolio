@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/fira-sans-compressed-heavy');
+@import url('https://fonts.cdnfonts.com/css/inter');
 
 body {
   margin: 0;
@@ -12,15 +12,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #1a1622; 
   color: #ffffff; 
-  font-family: 'Poppins', sans-serif; 
-  
+  font-family: 'Fira Sans Compressed', sans-serif;
+  overflow-x: hidden;
 }
 
+
+
 #root {
-  max-width: 1440px; /* Limite la largeur maximale */
-  margin: 0 auto; /* Centre horizontalement */
- 
-  box-shadow: 0 2px 5px rgba(228, 122, 69, 0.4);
+  width: 100vw;             /* ✅ Étend sur toute la largeur réelle */
+  max-width: none;          /* ✅ Supprime la contrainte de 1440px */
+  margin: 0;                /* ✅ Plus de centrage qui crée des décalages */
+  padding: 0;
+  overflow-x: hidden;       /* ✅ Supprime tout débordement horizontal */
+}
+
+.section-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 @keyframes pulse {
@@ -46,3 +56,13 @@ code {
     font-size: 14px; /* Taille de police réduite pour les écrans mobiles */
   }
 }
+
+h1, h2 {
+  font-family: 'Fira Sans Compressed Heavy', sans-serif;
+}
+
+p {
+  font-family: 'Boldonse', sans-serif;
+}
+
+

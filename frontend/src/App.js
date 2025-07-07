@@ -2,18 +2,24 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import ProfileCard from './components/about/profileCard';
-import TimeLine from './components/about/timeLine';
+// import TimeLine from './components/about/timeLine';
 import ContactForm from './components/contact/contactForm';
 import SocialLinks from './components/contact/socialLinks';
 import Projets from './components/projets/projets';
 // import SkillCloud from './components/skills/skillCloud';
 import IntroScreen from './pages/IntroScreen';
-import SkillBoxes from './components/skills/skillBoxes';
+// import SkillBoxes from './components/skills/skillBoxes';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import AboutNow from './components/about/aboutNow';
+import PortfolioSlider from './components/projets/portfolioSlider';
+
 
 function App() {
   const [showIntro, setShowIntro] = useState(false);
 
   useEffect(() => {
+    AOS.init({ duration: 800, once: true });
     // Récupérer le compteur depuis le localStorage
     let introCount = localStorage.getItem('introCount');
 
@@ -22,7 +28,7 @@ function App() {
       localStorage.setItem('introCount', '1');
       setShowIntro(true);
     } else {
-      introCount = parseInt(introCount, 10);
+      introCount = parseInt(introCount, 1);
 
       if (introCount < 4) {
         // Incrémenter le compteur et afficher l'intro
@@ -52,20 +58,24 @@ function App() {
             </section>
             <section id="skills">
   <div className="skills-container">
-    <SkillBoxes />
+    
   </div>
+
   <div className="timeline">
-    <TimeLine />
+    <AboutNow />
   </div>
 </section>
-            <section id="projets">
-              <Projets />
-            </section>
-            <section id="contact">
-              
-              <ContactForm />
-              <SocialLinks />
-            </section>
+<section id="projets">
+  <div className="section-wrapper">
+    <PortfolioSlider />
+  </div>
+</section>
+
+<section id="contact">
+  <div className="section-wrapper">
+    <ContactForm />
+  </div>
+</section>
           </main>
           <Footer />
         </>

@@ -1,0 +1,209 @@
+.focus-container {
+  max-width: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+.focus-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.focus-text {
+  flex: 0 0 75%;  // ✅ proportion corrigée ici
+  max-width: 75%; // ✅ aligné avec le flex
+ 
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin: 0;
+    color: white;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+.focus-image {
+  flex: 0 0 25%;  // ✅ proportion corrigée ici
+  max-width: 25%; // ✅ aligné avec le flex
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}
+
+.outline-title {
+  font-size: 2.5rem;
+  color: transparent !important;
+  -webkit-text-stroke: 1.5px white;
+  text-stroke: 1.5px white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// ✅ bouton centré
+.focus-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+// ✅ bouton style skill-box
+.project-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 2.5rem;
+  min-width: 220px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000 !important;
+  text-decoration: none;
+  background: #616161;
+  border-radius: 12px;
+  z-index: 0;
+  overflow: hidden;
+  border: none;
+  justify-content: center;
+
+  img.github-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(21, 245, 234, 0.8) 80%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    background-size: 200% 200%;
+    z-index: 1;
+    animation: singleRay 5s linear infinite;
+    box-shadow: 0 0 8px rgba(228, 122, 69, 0.4);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: #121212;
+    z-index: 2;
+    margin: 1px;
+  }
+
+  * {
+    position: relative;
+    z-index: 3;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.button-text {
+  z-index: 3;
+  position: relative;
+  color: white;
+  vertical-align: middle;
+}
+
+@keyframes singleRay {
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .focus-content {
+    flex-direction: column;
+  }
+
+  .focus-text,
+  .focus-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .focus-text {
+    ul {
+      padding-left: 0;
+    }
+  }
+}
+
+.focus-image {
+  flex: 0 0 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; // ✅ Pour que les éléments internes puissent être positionnés
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2; // ✅ En dessous
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   
+  }
+
+  img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    z-index: 1; // ✅ Au-dessus du canvas
+  }
+}
+
+.section-title {
+  margin-bottom: 0!important;
+  
+}

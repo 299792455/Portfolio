@@ -1,0 +1,14 @@
+.rain-discount-container {
+    background-color: #11111100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    box-sizing: content-box;
+  
+    canvas {
+      display: block;
+      box-sizing: content-box;
+    }
+  }
+  

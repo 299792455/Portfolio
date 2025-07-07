@@ -1,57 +1,62 @@
 @import './variables';
 @import './mixins';
 
+
 #projects {
+
   background-color: #1a1622;
-  padding: 4rem 0;
-  
 
   h2 {
-    color: $primary-color;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    position: relative;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: bold;
+    color: #ffffff; /* Texte plein blanc */
+    margin: 0 0 3rem 0;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
 
+    /* On supprime le ::after */
     &::after {
-      content: '';
-      width: 60px;
-      height: 4px;
-      background: $primary-color;
-      display: block;
-      margin: 0.5rem auto 0;
-      border-radius: 2px;
+      content: none;
     }
   }
 
   .projets-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    grid-template-columns: repeat(5, 1fr);
     gap: 2.5rem;
-    padding: 0 2rem;
-    
-  
-    /* Optionnel : Pour la réactivité, vous pouvez ajouter des media queries */
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans moyens */
+  }
+}
+
+/* 👇 Nouvelle carte avec lien */
+.voir-tous-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.voir-tous-link {
+  text-align: right;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+
+  a {
+    color: rgba(21, 245, 234, 0.8);
+    text-decoration: none;
+    &:hover {
+      color: rgba(21, 245, 234, 1);
     }
+  }
+}
+
+.projets-carousel {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
-    }
-  }
 }
-
-/* _projects.scss */
-@media (max-width: 1200px) {
-  .projets-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .projets-list {
-    grid-template-columns: 1fr;
-  }
-}
-

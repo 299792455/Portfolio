@@ -1,33 +1,76 @@
-@import './variables'; // Toujours importer les variables en premier
+@import './variables';
 @import './mixins';
 
 #contact {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  padding: 40px;
+  flex-direction: column;
   box-sizing: border-box;
+  padding: 0 2rem; // le section-wrapper gère le max-width et centrage
 
   h2 {
-    margin-bottom: 2rem;
+    font-size: clamp(2rem, 6vw, 5rem);
+    text-align: left;
+    margin: 0 0 1rem 0;
   }
 
-  form {
+  .contact-desc {
+    font-size: 1.5rem;
+    color: #e6396d;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 0 20px 0;
+  }
+
+  .contact-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+    .contact-form {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .social-links {
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; // ✅ ALIGNE EN HAUT
+      gap: 1rem;
+      
+  }
+}
+
+  .contact-form {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 75%; // Par défaut sur desktop
-    margin: 0 auto; // Centre le formulaire horizontalement
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
 
     input,
     textarea {
-      width: 100%; // Assure que les champs prennent toute la largeur du conteneur
+      width: 100%;
       padding: 1rem;
       border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       box-sizing: border-box;
+      background-color: #121212;
+      color: #ffffff !important;
+      &::placeholder {
+        color: #ffffff !important;
+        opacity: 1; // ✅ Important, sinon certains navigateurs le rendent transparent
+      }
+    }
+
+    textarea {
+      min-height: 200px;
     }
 
     button {
@@ -37,15 +80,12 @@
       background: #121212;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      align-items: center;
-      justify-content: center;
       padding: 1rem 2rem;
-      width: 30%; // Largeur par défaut pour le bouton sur mobile
-      font-size: 1rem;
+      width: 30%;
+      font-size: 1.1rem;
       color: white;
+      align-self: flex-start;
 
-      /* Bordure lumineuse animée */
       &::before {
         content: '';
         position: absolute;
@@ -57,7 +97,7 @@
         background: linear-gradient(
           90deg,
           rgba(0, 0, 0, 0) 50%,
-          rgba(44, 209, 185, 0.8) 60%,
+          rgba(45, 176, 199, 0.8) 60%,
           rgba(0, 0, 0, 0) 70%
         );
         background-size: 200% 200%;
@@ -87,72 +127,83 @@
   }
 
   .social-links {
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-
-    h3 {
-      margin-bottom: 1rem;
-      font-size: 22px;
-    }
+    gap: 1rem;
+    width: auto;
 
     ul {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100%;
-      list-style: none;
+      gap: 1rem;
       padding: 0;
       margin: 0;
+      list-style: none;
+
+      li a img.social-icon {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.2s ease;
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+      }
+
+      li a img.social-icon:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  padding-bottom: 4rem;
+}
+
+@keyframes singleRay {
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+#contact > .section-wrapper {
+  max-width: 1440px !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 2rem 1rem;
+
+    .contact-content {
+      flex-direction: column;
     }
 
-    ul li {
-      margin: 0.5rem 0;
+    .contact-form {
+      width: 100%;
     }
 
-    ul a {
-      text-decoration: none;
-      color: $primary-color;
-      font-weight: bold;
+    .social-links {
+      flex-direction: row;
+      justify-content: center;
 
-      &:hover {
-        color: $secondary-color;
+      ul {
+        flex-direction: row;
       }
     }
   }
 }
 
-/* _contact.scss */
-@media (max-width: 768px) {
-  #contact {
-    flex-direction: column;
-    align-items: center;
+.contact-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  margin-bottom: 1rem;
+
+  img {
     width: 100%;
-    padding: 20px; // Réduit le padding sur mobile
-  }
-
-  form {
-    width: 90%; // Formulaire prend 90% de la largeur sur mobile
-    margin: 0 auto; // Centre le formulaire horizontalement
-
-    button {
-      width: 100% !important;
-    }
-  }
-
-  .social-links {
-    width: 90%; // Les liens sociaux prennent également 90% de la largeur
-    margin: 20px auto; // Ajoute un espacement avec les autres éléments
-  }
-
-  form input,
-  form textarea {
-    width: 100%; // Champs prennent toute la largeur du formulaire
-  }
-
-  form button {
-    width: 100%; // Le bouton prend toute la largeur du formulaire sur mobile
+    height: 100%;
+    object-fit: cover;
   }
 }

@@ -1,0 +1,73 @@
+{
+  
+  "aboutMe": "INICIO",
+  "skills": "COMPETENCIAS",
+  "projects": "PROYECTOS",
+  "contact": "CONTACTO",
+
+ 
+  "allRightsReserved": "Todos los derechos reservados.",
+
+  
+  "systemStartup": "[Arranque del sistema...]",
+  "quantumGravityInitialization": "[Inicialización de los módulos de gravedad cuántica...¡OK!]",
+  "muscleFundamentalsCheck": "[Comprobación de los fundamentos musculares...¡OK USA!]",
+  "pilotLoading": "[Cargando los pilotos...¡OK!]",
+  "bovisFrequencyCheck": "[Comprobación de la frecuencia BOVIS...¡ERROR!]",
+  "serverConnection": "[Conexión a los servidores...¡OK!]",
+  "pncsAtTheGates": "[PNCs en las puertas...¡OK!]",
+  "servicesStarting": "[Inicio de los servicios...¡OK!]",
+  "systemCheckComplete": "[Comprobación del sistema completada.]",
+  "zipiziCheck": "[3x + 1 = izipizi...¡OK!]",
+  "minitelLoading": "[Cargando el minitel de los internets...¡OK!]",
+  "cigErrorInitialization": "[Inicialización ERROR CIG 30k...¡OK!]",
+  "backendLoading": "[Cargando el backend...¡OK!]",
+  "electrolytesStabilization": "[Estabilización de los electrolitos...¡ERROR!]",
+  "frontendLoading": "[Cargando el frontend...¡OK!]",
+  "introScreenLimit": "[IntroScreen limitado a 4 Refresh...¡OK!]",
+  "applicationLaunch": "[Lanzamiento de la aplicación...]",
+  "successMessage": "...¡Éxito! El Sí necesita el No para ganar contra el No.",
+
+  
+  "projectDetails": "Detalles del proyecto",
+  "genesis": "Génesis",
+  "problem": "Problema",
+  "solution": "Solución",
+  "seeProject": "Ver el proyecto",
+  "loadingProjects": "Cargando proyectos...",
+  "projectsError": "Error al cargar los proyectos.",
+  "noProjects": "No hay proyectos disponibles por el momento.",
+
+ 
+  "contactFormTitle": "CONTACTO",
+  "contactDescription": "Consejos, ideas de proyectos o simple duda existencial — todo empieza con un mensaje.",
+  "yourName": "Tu nombre",
+  "yourEmail": "Tu correo electrónico",
+  "yourMessage": "Tu mensaje",
+  "send": "Enviar",
+
+ 
+  "developerDescription": "Christophe, Desarrollador FullStack React/Node basado en París.",
+  "passionDescription": "Apasionado por la creación de aplicaciones web originales y de alto rendimiento.",
+  "developerTitle": "Christophe, Desarrollador FullStack React/Node basado en París.",
+
+ 
+  "heroTitle1": "APLICACIONES",
+  "heroTitle2": "SITIOS WEB",
+  "heroTitle3": "OPTIMIZACIÓN",
+  "helloLabel": "HOLA, ME LLAMO CHRISTOPHE",
+  "helloSubtext": "Desarrollador Web a tiempo completo y ex Business Developer",
+  "helloDescription": "Creo aplicaciones y sitios web para todo tipo de público. También desarrollo proyectos Open Source, como DealScout — una extensión web que muestra las ofertas comerciales de videos de YouTube con un solo clic.",
+  "helloCompany": "Paralelamente estoy desarrollando una aplicación de gestión, EquiX, para centros equestres",
+  "stackLabel": "Stacks* preferidos:",
+  "stackNote": "*NB: El mejor stack es el que pide el cliente.",
+
+  
+  "focusTitle": "FOCO...",
+  "focusProjectTitle": "Extensión de Chrome DealScout",
+  "focusIntro": "Desarrollo de una extensión web Open Source que muestra en 1 clic las 3 informaciones clave de la oferta comercial del video de YouTube:",
+  "focusPointCode": "El código promocional",
+  "focusPointDiscount": "El % de descuento",
+  "focusPointLink": "El enlace de la oferta comercial",
+  "focusPrivacy": "Todo esto sin recolectar datos personales"
+}
