@@ -280,23 +280,23 @@ useEffect(() => {
     <div className="container">
       <div id="content">
         <h2
-          className="profile-title outline flicker"
-          ref={el => (titlesRef.current[0] = el)}
-        >
-          APP WEB
-        </h2>
-        <h2
-          className="profile-title flicker"
-          ref={el => (titlesRef.current[1] = el)}
-        >
-          SITES WEB
-        </h2>
-        <h2
-          className="profile-title outline flicker"
-          ref={el => (titlesRef.current[2] = el)}
-        >
-          OPTIMISATION
-        </h2>
+  className="profile-title outline flicker"
+  ref={el => (titlesRef.current[0] = el)}
+>
+  {t('heroTitle1')}
+</h2>
+<h2
+  className="profile-title flicker"
+  ref={el => (titlesRef.current[1] = el)}
+>
+  {t('heroTitle2')}
+</h2>
+<h2
+  className="profile-title outline flicker"
+  ref={el => (titlesRef.current[2] = el)}
+>
+  {t('heroTitle3')}
+</h2>
         <p className="developer-tag">{t('developerDescription')}</p>
       </div>
 

@@ -14,6 +14,7 @@ import PhpIcon from '../../styles/images/PHP-logo.svg.png';
 import VsIcon from '../../styles/images/Visual_Studio_Code.png';
 import FeedlyIcon from '../../styles/images/Feedly-logo.png';
 import NotionIcon from '../../styles/images/notion.png';
+import NextIcon from '../../styles/images/Next.png';
 import { useTranslation } from 'react-i18next';
 
 const SkillBoxes = () => {
@@ -47,7 +48,7 @@ const SkillBoxes = () => {
             {renderSkill(NodeIcon, 'Node.js', 'Node.js')}
             {renderSkill(ExpressIcon, 'Express', 'Express')}
             {renderSkill(MongoIcon, 'MongoDB', 'MongoDB')}
-            {renderSkill(PhpIcon, 'PHP', 'PHP')}
+            {renderSkill(NextIcon, 'Next', 'Next')}
           </div>
         </div>
 

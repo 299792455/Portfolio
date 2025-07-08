@@ -14,42 +14,39 @@
 
   .skills-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 2rem;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .skill-box {
     position: relative;
-    padding: 1rem 1rem ; // ⇦ modif : plus de respiration
+    padding: 1rem;
     background: #121212;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     width: 300px;
     height: auto;
-    margin-bottom: 1rem; // ⇦ modif : espacement entre blocs
-    margin-top: 3rem;
+    margin: 2rem auto 1rem;
 
     h3 {
       font-size: 1.6rem;
       color: #ffffff;
-      align-self: center;
       letter-spacing: 0.5px;
-  text-align: center;
-  margin-bottom: 1rem;
+      text-align: center;
       margin: 10px 0 5px;
     }
 
     .icons {
       display: flex;
       flex-direction: column;
-      align-items:left; // ⇦ modif : centre les items
+      align-items: flex-start;
       gap: 1rem;
       padding: 20px;
       padding-bottom: 0;
-      
 
       .skill-item {
         display: flex;
@@ -60,24 +57,23 @@
         border-radius: 8px;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.05); // ⇦ modif : effet hover global
+          background: rgba(255, 255, 255, 0.05);
         }
 
         .skill-icon {
           width: 50px;
           height: 50px;
-          max-height: 50px;
           object-fit: contain;
-
           transition: transform 0.3s ease-in-out;
           border-radius: 10px;
+
           &:hover {
             transform: scale(1.2);
           }
         }
 
         .skill-label {
-          color: #f0f0f0; // ⇦ modif : texte plus lisible
+          color: #f0f0f0;
           font-size: 1.1rem;
           font-weight: 500;
         }
@@ -130,32 +126,42 @@
     }
   }
 
-  @media (max-width: 768px) {
+ 
+
+
+  @media (max-width: 480px) {
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    #skills {
+  padding: 0 10px;
+}
+
     .skill-box {
       width: 100%;
+      max-width: 220px;
+     margin: 1rem auto 0.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .icons {
+        gap: 0.6rem;
+
+        .skill-item {
+          .skill-icon {
+            width: 34px;
+            height: 34px;
+          }
+
+          .skill-label {
+            font-size: 0.95rem;
+          }
+        }
+      }
     }
-  }
-}
-
-@media (min-width: 1200px) {
-  .skill-item {
-    margin-bottom: 1.3rem; /* Plus d’espace sur très grands écrans */
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem; // ⇦ un peu plus d’espace entre les blocs
-  }
-
-  .skill-box {
-    width: 90%;
-    max-width: 320px; // ⇦ garde une largeur confortable
-  }
-
-  .icons {
-    align-items: flex-start; // ⇦ réaligne à gauche si tu préfères sur petit écran
   }
 }
