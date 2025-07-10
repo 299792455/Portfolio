@@ -9,7 +9,7 @@ import LinkedIn from '../../styles/images/linkedin.png';
 
 const ContactForm = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', company: ''  });
   const [toast, setToast] = useState('');
 
   const handleChange = (e) => {
@@ -24,6 +24,7 @@ const ContactForm = () => {
         to: '75017pi@gmail.com',
         subject: `Message de ${formData.name}`,
         message: formData.message,
+        company: formData.company,
       });
       setToast(`✅ ${t('emailSuccess')}`);
       setFormData({ name: '', email: '', message: '' });
@@ -58,6 +59,14 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
+          <input
+  type="text"
+  name="company"
+  value={formData.company || ''} 
+  onChange={handleChange}
+  autoComplete="off"
+  style={{ display: 'none' }} 
+/>
           <textarea
             name="message"
             placeholder={t('yourMessage')}

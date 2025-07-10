@@ -6,6 +6,14 @@ import { useTranslation } from 'react-i18next';
 
 const slides = [
   {
+    image: "https://i.postimg.cc/mDMPPvsY/Capture-d-cran-2025-07-10-180908.png",
+    title: "DealScout",
+    link: "https://dealscout.deals/",
+    descriptionKey: "project1_description",
+    objectifKey: "project1_objective",
+    stack: ["JavaScript", "Chrome API", "Regex", "AI lite"],
+  },
+  {
     image: "https://i.postimg.cc/yYdnTnPr/Online-Dreams-Makers-Agency.png",
     title: "Agence OnlineDreamsMakers",
     link: "https://www.onlinedreamsmakers.es/",
@@ -20,14 +28,6 @@ const slides = [
     descriptionKey: "project3_description",
     objectifKey: "project3_objective",
     stack: ["Next.js", "Tailwind CSS", "Swiper.js", "Framer Motion"],
-  },
-  {
-    image: "https://i.postimg.cc/qRxQ15SW/Extension-deal-Scout-OS.png",
-    title: "DealScout (En Développement)",
-    link: "#",
-    descriptionKey: "project1_description",
-    objectifKey: "project1_objective",
-    stack: ["JavaScript", "Chrome API", "Regex", "AI lite"],
   },
   {
     image: "https://i.postimg.cc/BQk5B3tX/Application-Equi-X.png",

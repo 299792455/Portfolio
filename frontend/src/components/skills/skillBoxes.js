@@ -10,7 +10,6 @@ import CssIcon from '../../styles/images/CSS.png';
 import MongoIcon from '../../styles/images/Mongodb.png';
 import ExpressIcon from '../../styles/images/Express.png';
 import GitIcon from '../../styles/images/Git.png';
-import PhpIcon from '../../styles/images/PHP-logo.svg.png';
 import VsIcon from '../../styles/images/Visual_Studio_Code.png';
 import FeedlyIcon from '../../styles/images/Feedly-logo.png';
 import NotionIcon from '../../styles/images/notion.png';

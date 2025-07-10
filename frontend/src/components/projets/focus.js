@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/_focus.scss';
-import extensionImage from '../../styles/images/dealScoutFocus.png';
+
 import githubLogo from '../../styles/images/Git.png';
 import { useTranslation } from 'react-i18next';
 import RainDiscount from './rainDiscount';
@@ -25,7 +25,7 @@ const Focus = () => {
 
         <div className="focus-image">
           <RainDiscount />
-          <img src={extensionImage} alt="Extension DealScout" />
+       
         </div>
       </div>
 
