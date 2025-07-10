@@ -9,8 +9,9 @@ import LinkedIn from '../../styles/images/linkedin.png';
 
 const ContactForm = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '', company: ''  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', company: '' });
   const [toast, setToast] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +20,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await apiService.post('/contact/send-email', {
         to: '75017pi@gmail.com',
@@ -34,6 +36,8 @@ const ContactForm = () => {
       setToast(`❌ ${t('emailError')}`);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setToast(''), 4000);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -60,13 +64,13 @@ const ContactForm = () => {
             required
           />
           <input
-  type="text"
-  name="company"
-  value={formData.company || ''} 
-  onChange={handleChange}
-  autoComplete="off"
-  style={{ display: 'none' }} 
-/>
+            type="text"
+            name="company"
+            value={formData.company || ''}
+            onChange={handleChange}
+            autoComplete="off"
+            style={{ display: 'none' }}
+          />
           <textarea
             name="message"
             placeholder={t('yourMessage')}
@@ -74,8 +78,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit">
-            <span>{t('send')}</span>
+          <button type="submit" disabled={loading}>
+            <span>{loading ? t('sending') : t('send')}</span>
           </button>
         </form>
 

@@ -1,7 +1,12 @@
 const sendEmail = require('../middleware/emailService');
 
 exports.sendEmail = async (req, res) => {
-  const { to, subject, message } = req.body;
+  const { to, subject, message, company  } = req.body;
+
+  if (company && company.trim() !== '') {
+  console.warn('Tentative de spam détectée via honeypot.');
+  return res.status(400).json({ error: 'Requête invalide.' });
+}
 
   try {
     await sendEmail(to, subject, message);

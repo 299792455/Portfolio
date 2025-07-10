@@ -41,7 +41,7 @@ const IntroScreen = ({ onFinish }) => {
         commencerSaisie();
       }
     } else {
-      // Toutes les lignes sont terminées
+      
       setTimeout(onFinish, 3000);
     }
 
@@ -54,18 +54,18 @@ const IntroScreen = ({ onFinish }) => {
         if (indexChar >= ligneCourante.length - 1) {
           clearInterval(intervalSaisie);
           if (indexLigneCourante < lignesTerminal.length - 1) {
-            // Pas la dernière ligne
+            
             setTextePrecedent((prev) => prev + ligneCourante + '\n');
             setTexteEnCours('');
             setIndexChar(0);
             setIndexLigneCourante((prev) => prev + 1);
           } else {
-            // Dernière ligne
+           
             setIndexLigneCourante((prev) => prev + 1);
             setIndexChar(0);
           }
         }
-      }, 10); // Vitesse de saisie
+      }, 10); 
     }
 
     return () => clearInterval(intervalSaisie);

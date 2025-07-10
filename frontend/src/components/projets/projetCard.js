@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import '../../styles/projetCard.scss';
 import { useTranslation } from 'react-i18next';
 
-Modal.setAppElement('#root'); // Assurez-vous que c'est bien l'ID de votre élément racine
+Modal.setAppElement('#root');
 
 const ProjetCard = ({ projet }) => {
   const { t } = useTranslation();

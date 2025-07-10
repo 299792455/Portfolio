@@ -3,9 +3,9 @@ import '../../styles/_rainDiscount.scss';
 
 const RainDiscount = () => {
   const canvasRef = useRef(null);
-  const isAnimatingRef = useRef(true); // ✅ Variable mutable
+  const isAnimatingRef = useRef(true);
 
-  // ✅ Important : garder une seule instance de animate
+
   const animateRef = useRef();
 
   useEffect(() => {
@@ -181,10 +181,10 @@ const RainDiscount = () => {
       requestAnimationFrame(animateRef.current);
     }
 
-    // ✅ On stocke l'animation dans le ref pour éviter la fermeture sur isAnimatingRef
+    
     animateRef.current = animate;
 
-    // ✅ Lancer l'animation
+
     animateRef.current();
 
     const container = canvas.parentElement;

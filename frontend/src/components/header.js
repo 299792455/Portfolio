@@ -7,7 +7,7 @@ import Flag from 'react-world-flags';
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [langMenuOpen, setLangMenuOpen] = useState(false); // ✅ nouveau state
+  const [langMenuOpen, setLangMenuOpen] = useState(false); 
   const [selectedLang, setSelectedLang] = useState('fr');
 
   const toggleMenu = () => {

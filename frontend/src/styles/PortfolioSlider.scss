@@ -2,10 +2,10 @@
   color: #fff;
   text-align: center;
   max-width: 100%;
-  padding: 2rem 2rem;
+  padding: 2rem;
   margin: 0 auto;
 
-    .wrapper {
+  .wrapper {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -13,8 +13,8 @@
   h2 {
     font-size: clamp(2rem, 6vw, 5rem);
     font-weight: bold;
-    color: #ffffff;
-    margin: 0 0 3rem 0;
+    color: #fff;
+    margin-bottom: 3rem;
     line-height: 1;
     text-align: left;
     text-transform: uppercase;
@@ -134,10 +134,8 @@
       font-size: clamp(1.8rem, 7vw, 3.5rem);
     }
 
-    .slider-info {
-      h3 {
-        font-size: 1.3rem;
-      }
+    .slider-info h3 {
+      font-size: 1.3rem;
     }
   }
 
@@ -167,7 +165,7 @@
 
   @media (max-width: 480px) {
     margin: 3rem 0;
-    
+
     .slider-container {
       max-width: 95%;
     }

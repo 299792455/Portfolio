@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import '../../styles/PortfolioSlider.css';
+import '../../styles/PortfolioSlider.scss';
 import { useTranslation } from 'react-i18next';
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/_skills.scss';
 
-// Import des images
+
 import ReactIcon from '../../styles/images/React-icon.svg.png';
 import NodeIcon from '../../styles/images/nodejs.png';
 import JsIcon from '../../styles/images/Js.png';

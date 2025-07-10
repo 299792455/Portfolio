@@ -33,7 +33,7 @@ const ProfileCard = () => {
     showNextTitle();
   }, []);
 
-  // Fond animé sans jQuery
+  // Fond animé 
 useEffect(() => {
   let ww, wh, canvas, ctx;
   let frame = 0;
