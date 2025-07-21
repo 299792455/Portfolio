@@ -103,5 +103,11 @@
 "project4_objective": "Calendar, bookings, user/admin/horse management, stats, notifications, etc.",
 
 "emailSuccess": "Email sent successfully! I'll get back to you soon!",
-"emailError": "Error while sending the message."
+"emailError": "Error while sending the message.",
+"sliderTitles": {
+    "project1": "DealScout",
+    "project2": "Agencia OnlineDreamsMakers",
+    "project3": "DJ Sergio Telmo",
+    "project4": "Aplicación EquiX (En Desarrollo)"
+}
 }
